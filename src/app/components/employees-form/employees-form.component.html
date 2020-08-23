@@ -1,0 +1,35 @@
+<!-- Default form contact -->
+<form class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">Crear Empleado</p>
+
+    <!-- Name -->
+    <input [(ngModel)]="employee.fullName" name="fullName" type="text" id="defaultContactFormName"
+        class="form-control mb-4" placeholder="Nombre completo" required minlength="4" #fullName="ngModel">
+    <div *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class=" alert alert-danger">
+        <div *ngIf="fullName.errors.required"> Nombre es requerido</div>
+        <div *ngIf="fullName.errors.minlength">El nombre debe contener minimo 4 letras</div>
+    </div>
+
+
+    <!-- Funcion -->
+    <input [(ngModel)]="employee.function" name="function" type="text" id="defaultContactFormEmail"
+        class="form-control mb-4" placeholder="Función" required #nombre="ngModel" #funcion="ngModel">
+    <div *ngIf="funcion.invalid && (funcion.dirty || funcion.touched)" class=" alert alert-danger">
+        <div *ngIf="funcion.errors.required"> La función es requerido</div>
+    </div>
+
+    <!-- Jefe Inmediato -->
+    <label>Jefe inmediato</label>
+    <select class="browser-default custom-select mb-4" [(ngModel)]="employee.bossId" name="bossId">
+        <option value="" selected disabled>Seleccionar opción</option>
+        <option value="1">Karen Suarez</option>
+        <option value="2">Javier Espinoza</option>
+    </select>
+
+
+    <!-- Send button -->
+    <button (click)="createEmployee()" type="button" class="btn btn-success">Success</button>
+
+</form>
+<!-- Default form contact -->

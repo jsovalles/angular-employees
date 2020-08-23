@@ -1,0 +1,22 @@
+<section class="row">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th></th>
+                    <th>Nombre Completo</th>
+                    <th>Función</th>
+                    <th>Jefe Actual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td class="align-middle">
+                        <!--<img src="{{planeta.foto}}" height="60" class="center">-->
+                    </td >
+                    <td>{{employee.fullName}}</td>
+                    <td>{{employee.function}}</td>
+                    <td *ngIf="employee.boss !=null">{{employee.boss.fullName}}</td>
+                </tr>
+            </tbody>
+        </table>
+</section>
