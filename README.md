@@ -1,27 +1,30 @@
-# Employees
+# angular-employees
+Proyecto en Angular con conexión REST a Spring Boot para un listado y creación de empleados
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
+Vista previa en GitHub Pages [aquí](https://jsovalles.github.io/angular-employees/employees).
 
-## Development server
+**Se necesita de Docker Compose para la sección de Back-end, las instrucciones se encuentran [aquí](https://github.com/jsovalles/spring-boot-employees)**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Instalación/Despliegue
 
-## Code scaffolding
+Se descarga el proyecto desde GitHub y después se realiza los siguientes comandos
+```
+ng build
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ng serve -o
+```
+Después de que el comando termine de desplegar automáticamente se abre la página en el navegador determinado 
 
-## Build
+## Despliegue en GitHub Pages
+```
+ng add angular-cli-ghpages
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+ng build
 
-## Running unit tests
+ng deploy --base-href=https://jsovalles.github.io/angular-employees/
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Desarrollado en
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* [Angular](https://angular.io/s) - Front-End Framework
+* TypeScript, JavaScript, HTML5 y CSS
